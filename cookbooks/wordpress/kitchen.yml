@@ -1,0 +1,21 @@
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: ubuntu-22.04
+
+suites:
+  - name: default
+    run_list:
+      - recipe[wordpress::default]
+    verifier:
+      inspec_tests:
+        - test/integration/default
+        - test/integration/default/wordpress_install_test.rb
+        - test/integration/default/wordpress_site_test.rb
+    attributes:
+      apache:
+        listen: 80
