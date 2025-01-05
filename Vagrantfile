@@ -27,10 +27,11 @@ Vagrant.configure("2") do |config|
   end
   
   # Provisión con un script de shell
-  # Actualiza los repositorios del sistema e instala Chef utilizando un script Bash en línea.
+  # Actualiza los repositorios del sistema e instala Chef utilizando el script oficial de instalación de Chef.
   config.vm.provision "shell", inline: <<-SHELL
     apt-get update
-    curl -L https://chef.io/chef/install.sh | sudo bash
+    apt-get install -y curl
+    curl -L https://omnitruck.chef.io/install.sh | sudo bash
   SHELL
 
   # Provisión con Chef Solo
