@@ -1,0 +1,42 @@
+{
+  "revision_id": "aaec99e06f0ac657303eb11cfef3aa21e984cc948de54724393680d12f79870d",
+  "name": "wordpress",
+  "run_list": [
+    "recipe[wordpress::default]"
+  ],
+  "included_policy_locks": [
+
+  ],
+  "cookbook_locks": {
+    "wordpress": {
+      "version": "0.1.0",
+      "identifier": "9ab6d4ae5e0cc7da502fa4c5a04ff8c3f7247530",
+      "dotted_decimal_identifier": "43548170988162247.61449710481023055.273520548672816",
+      "source": ".",
+      "cache_key": null,
+      "scm_info": null,
+      "source_options": {
+        "path": "."
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "wordpress",
+        ">= 0.0.0"
+      ]
+    ],
+    "dependencies": {
+      "wordpress (0.1.0)": [
+
+      ]
+    }
+  }
+}
